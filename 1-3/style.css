@@ -1,0 +1,25 @@
+.main{
+    background-color: lawngreen;
+    width: 500px;
+    height:250px;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.child1{
+    background-color: lawngreen;
+    width: 400px;
+    height:200px;
+    border: 1px solid black;
+    margin-left: 20px;
+    overflow: auto
+}
+
+.child2{
+    background-color: lawngreen;
+    width: 350px;
+    height:150px;
+    border: 1px solid black;
+    margin-left: 20px;
+    
+}

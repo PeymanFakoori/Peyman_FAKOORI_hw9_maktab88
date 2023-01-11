@@ -1,0 +1,9 @@
+div{
+    width: 90%;
+    color: green;
+    background-color: aliceblue;
+}
+p{
+    color: black;
+    display: none;
+}
