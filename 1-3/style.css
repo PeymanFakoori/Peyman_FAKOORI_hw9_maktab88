@@ -1,4 +1,5 @@
-.main{
+.parent {
+    
     background-color: lawngreen;
     width: 500px;
     height:250px;
@@ -6,7 +7,7 @@
     margin-left: 20px;
 }
 
-.child1{
+.target{
     background-color: lawngreen;
     width: 400px;
     height:200px;
@@ -15,7 +16,7 @@
     overflow: auto
 }
 
-.child2{
+.child{
     background-color: lawngreen;
     width: 350px;
     height:150px;

@@ -1,9 +1,18 @@
-$(document).ready(function(){
-$(".parent").on('click', function(){
-    $(".child1").text($(".child1").text() + $(".main").text());
-})
+$(document).ready(function () {
+  $(".parentBtn").on("click", function () {
+    let parentText = $(".parentText").text();
+    let targetText = $(".targetText").text();
+    let childText = $(".childText").text();
 
-$(".child").on('click', function(){
-    $(".child1").text($(".child2").text() + $(".main").text());
-})
+    $(".targetText").text(
+      parentText + " " + targetText + " " + childText + " " + targetText
+    );
+  });
+
+  $(".childBtn").on("click", function () {
+    let parentText = $(".parentText").text();
+    let targetText = $(".targetText").text();
+    let childText = $(".childText").text();
+    $(".targetText").text(childText + " " + targetText);
+  });
 });
