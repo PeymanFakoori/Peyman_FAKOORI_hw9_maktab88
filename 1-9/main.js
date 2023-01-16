@@ -52,9 +52,9 @@ function renderReadUser(uid) {
       .map((property) => `<p>${property}: ${user[property]}</p>`)
       .join("")
   );
-  $(".modal-footer").html(
+  $(".modal-footer").append(
     `<button onclick ="removeUser(${uid})">"Delete"</button>
-    <button onclick="renderUpdateUser(${uid})" >Update</button>`
+    <button onclick=renderUpdateUser(${uid})>Update</button>`
   );
   modalOpen();
 }
@@ -67,11 +67,13 @@ function removeUser(uid) {
   modalClose();
 }
 function renderUpdateUser(uid) {
+  resetModal();
+
   const user = userData.find((user) => user.uid === uid);
 
   $("#modal-header").text("update");
 
-  $(".modal-body").append(
+  $(".modal-body").html(
     Object.keys(user)
       .map((property) => {
         if (property === "uid") {
@@ -82,12 +84,14 @@ function renderUpdateUser(uid) {
       .join("")
   );
   $(".modal-footer")
-    .append(`<button onclick="renderReadUser(${uid})">cancel</button>
+    .html(`<button onclick="renderReadUser(${uid})">cancel</button>
       <button onclick="updateUser(${uid})">save</button>`);
 
   modalOpen();
 }
 function updateUser(uid) {
+  resetModal();
+
   const user = userData.find((user) => user.uid === uid);
 
   const updateInputs = $(".updateInputs");
