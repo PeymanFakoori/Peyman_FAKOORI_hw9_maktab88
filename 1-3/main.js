@@ -10,7 +10,7 @@ $(document).ready(function () {
   });
 
   $(".childBtn").on("click", function () {
-    let parentText = $(".parentText").text();
+    // let parentText = $(".parentText").text();
     let targetText = $(".targetText").text();
     let childText = $(".childText").text();
     $(".targetText").text(childText + " " + targetText);
