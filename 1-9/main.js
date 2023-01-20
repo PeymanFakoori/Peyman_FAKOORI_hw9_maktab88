@@ -52,7 +52,7 @@ function renderReadUser(uid) {
       .map((property) => `<p>${property}: ${user[property]}</p>`)
       .join("")
   );
-  $(".modal-footer").append(
+  $(".modal-footer").html(
     `<button onclick ="removeUser(${uid})">"Delete"</button>
     <button onclick=renderUpdateUser(${uid})>Update</button>`
   );
