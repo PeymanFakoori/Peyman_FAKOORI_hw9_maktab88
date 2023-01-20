@@ -37,7 +37,7 @@ function renderTable(sortBy = null) {
             <td>${user.firstName}</td>
             <td>${user.lastName}</td>
             <td>${user.city}</td>
-            <td>${user.postalCode}</td>
+            <td>${user.personalCode}</td>
             <td>${user.phoneNumber}</td>
             <td>${user.position}</td>
          </tr>`);
@@ -121,7 +121,7 @@ function renderCreateUser() {
     "firstname",
     "lastname",
     "city",
-    "postalCode",
+    "personalCode",
     "phoneNumber",
     "position",
   ];
